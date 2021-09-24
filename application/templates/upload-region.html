@@ -1,0 +1,76 @@
+<div class="map-region">
+  <div class="content-header">
+  </div>
+  <div class="upload-region">
+  <div class="upload">
+    <div>Upload Corner Records</div>
+    <label class="button">Select File</label>
+  </div>
+  </div>
+</div>
+
+<!-- <button id="show-pdf-button">Show PDF</button> -->
+
+<!-- <canvas id="the-canvas" style="border:1px solid black"></canvas>
+<input id='pdf' type='file'/>
+
+<script>
+var getPdfDoc
+let pdfDoc = null
+
+ pdfjsLib.disableWorker = true;
+
+// Get PDf Document
+pdfjsLib.getDocument('static/sample_pdfs/CR 2019-0976-0979-1.pdf').promise.then(pdfDoc_ => {
+  pdfDoc = pdfDoc_;
+
+  // Get number of pages that exist in the PDF
+  console.log('Number of pages in the pdf file: ' + pdfDoc.numPages);
+});
+
+var pdf = document.getElementById('pdf');
+pdf.onchange = function(ev) {
+  console.log("On Change look at variable file:")
+  console.log(document.getElementById('pdf').files[0])
+  if (file = document.getElementById('pdf').files[0]) {
+    fileReader = new FileReader();
+    fileReader.onload = function(ev) {
+      console.log(ev);
+      pdfjsLib.getDocument(fileReader.result).then(function getPdfHelloWorld(pdf) {
+        //
+        // Fetch the first page
+        //
+        console.log("variable pdf:")
+        console.log(pdf)
+        pdf.getPage(1).then(function getPageHelloWorld(page) {
+          var scale = 1.5;
+          var viewport = page.getViewport(scale);
+
+          //
+          // Prepare canvas using PDF page dimensions
+          //
+          var canvas = document.getElementById('the-canvas');
+          console.log("variable canvas: ")
+          console.log(canvas)
+          var context = canvas.getContext('2d');
+          console.log("variable context: ")
+          console.log(context)
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          //
+          // Render PDF page into canvas context
+          //
+          var task = page.render({canvasContext: context, viewport: viewport})
+          task.promise.then(function(){
+            console.log(canvas.toDataURL('image/jpeg'));
+          });
+        });
+      }, function(error){
+        console.log(error);
+      });
+    };
+    fileReader.readAsArrayBuffer(file);
+  }
+}
+</script> -->
