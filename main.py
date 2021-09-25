@@ -8,5 +8,10 @@ The solution is to provide a simple alternate startup file, like this present
 main.py, that just imports the app object. You can then just specify
 main:app in the Gunicorn command.
 """
-# Importing app variable from application/__init__.py
+
+"""
+Importing app variable from application/__init__.py
+When importing from application directory it will look for
+__init__.py file by default.
+"""
 from application import app
